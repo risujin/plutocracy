@@ -1,0 +1,12 @@
+
+Plutocracy Automatic Documentation Generator
+--------------------------------------------
+
+This program will automatically extract comments from the C sources and
+generate documentation for each of the namespaces. To run it and generate the
+documentation automatically, run:
+
+        $ python setup.py gendoc
+
+You must run this command from the directory tree root.
+

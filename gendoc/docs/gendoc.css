@@ -1,0 +1,128 @@
+body {
+        background: #2e3436;
+        color: #d3d7cf;
+        margin: 0;
+        border-bottom: 1px solid #414544;
+}
+
+h2 {
+        background: #3465a4;
+        border-left: 1px solid #729fcf;
+        border-top: 1px solid #729fcf;
+        border-right: 1px solid #204a87;
+        border-bottom: 1px solid #204a87;
+        margin: 0;
+        padding: 10pt;
+}
+
+a {
+        color: #eeeeec;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+a.out {
+        color: #729fcf;
+        font-weight: normal;
+        font-family: monospace;
+}
+
+a.out:hover {
+        text-decoration: underline;
+}
+
+a.out:active {
+        color: #ef2929;
+        text-decoration: underline;
+}
+
+h1 {
+        margin-left: 24pt;
+}
+
+.menu {
+        color: #204a87;
+        position: fixed;
+        z-index: 1;
+        top: 4pt;
+        right: 4pt;
+        padding: 4pt;
+        text-align: center;
+        background: #3465a4;
+        border-left: 1px solid #729fcf;
+        border-top: 1px solid #729fcf;
+        border-right: 1px solid #204a87;
+        border-bottom: 1px solid #204a87;
+}
+
+.entry {
+        border-top: 1px solid #414544;
+        background: #555753;
+        padding: 2pt;
+        padding-left: 24pt;
+        font-family: monospace;
+}
+
+.entry_body {
+        background: #2e3436;
+        padding-left: 48pt;
+        padding-right: 48pt;
+        border-top: 1px solid #414544;
+}
+
+b {
+        color: #8ae234;
+}
+
+b.keyword1 {
+        color: #fcaf3e;
+}
+
+b.keyword2 {
+        color: #ad7fa8;
+}
+
+pre {
+        color: #eeeeec;
+}
+
+span.def_op {
+        text-decoration: none;
+        color: #babdb6;
+}
+
+span.def_comment {
+        color: #888a85;
+}
+
+span.def_const {
+        color: #fce94f;
+}
+
+span.file {
+        font-weight: normal;
+        color: #414544;
+        margin-left: 6pt;
+        font-family: sans-serif;
+}
+
+span.no_file {
+        background: #ef2929;
+        color: #555753;
+        font-family: sans-serif;
+        padding-left: 4pt;
+        padding-right: 4pt;
+}
+
+.header {
+        background: #555753;
+        border-bottom: 1px solid #414544;
+        color: #414544;
+        margin: 0;
+        padding: 4pt;
+}
+
+code {
+        white-space: pre;
+}
+

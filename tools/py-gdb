@@ -1,0 +1,2 @@
+#!/bin/sh -v
+gdb -d /home/garoth/Coding/C/plutocracy -x pygdb.gdb python `ps -C python -o pid=`

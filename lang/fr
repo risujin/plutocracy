@@ -1,0 +1,53 @@
+/******************************************************************************\
+ Plutocracy Translation - Copyright (C) 2008 - YOUR NAME HERE
+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 2, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+\******************************************************************************/
+
+/* EN: "Console:" */
+i-console ""
+
+/* EN: "Host" */
+i-host "Creer"
+
+/* EN: "Join" */
+i-join "Rejoindre"
+
+/* EN: "Leave" */
+i-leave "Partir"
+
+/* EN: "Game Menu:" */
+i-menu "Menu Principal"
+
+/* EN: "Quit" */
+i-quit "Quitter"
+
+/* EN: "Video Settings:" */
+i-video "Options Graphiques"
+
+/* EN: "Apply" */
+i-video-apply "Appliquer"
+
+/* EN: "Color bits:" */
+i-video-color "Bits de couleur"
+
+/* EN: "Gamma correction:" */
+i-video-gamma "Correction du gamma"
+
+/* EN: "Resolution:" */
+i-video-mode ""
+
+/* EN: "Pixel scale:" */
+i-video-pixel-scale "Echelle de pixel"
+
+/* EN: "Windowed:" */
+i-video-windowed "Fentere"
+
+/* EN: "" */
+r-font-override ""

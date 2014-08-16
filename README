@@ -1,0 +1,334 @@
+................................................................................
+
+   ____  _       _
+  |  _ \| |_   _| |_ ___   ___ _ __ __ _  ___ _   _
+  | |_) | | | | | __/ _ \ / __| '__/ _` |/ __| | | |
+  |  __/| | |_| | || (_) | (__| | | (_| | (__| |_| |
+  |_|   |_|\__,_|\__\___/ \___|_|  \__,_|\___|\__, |  README
+                                              |___/
+
+  1. Release Information
+
+     1.1  Reporting Bugs and Known Issues
+
+  2. Compiling and Installing Plutocracy
+
+     2.1  POSIX systems
+     2.2  MacOS X (Darwin)
+     2.3  Windows with Visual Studio
+     2.4  Windows with MinGW
+
+  3. Playing Plutocracy
+
+  4. Developing for Plutocracy
+
+     4.1  Blender and the PLUM Model Format
+     4.2  GoogleCode
+
+  5. License and Copying
+
+     5.1  GPL License
+     5.2  GPL-Compatible Exceptions
+     5.3  CC License Exceptions
+     5.4  Bitstream Vera Fonts
+     5.5  SDL Notice
+     5.6  zlib Notice
+
+
+
+1. Release Information
+======================
+
+  This is a Git development version and has not officially been released. There
+  is no guarantee of compatibility or that it will even compile!
+
+
+  1.1  Reporting Bugs and Known Issues
+  ------------------------------------
+
+    Please check the project issue tracker before reporting bugs:
+
+      http://plutocracy.googlecode.com/
+
+    If the issue has not been addressed, you can either attempt to contact the
+    development team directly over IRC (#plutocracy on FreeNode) or post a new
+    bug report.
+
+    Please read the Issue Tracker Wiki before creating a new issue:
+
+      http://code.google.com/p/plutocracy/wiki/IssueTracker
+
+
+
+2. Compiling and Installing Plutocracy
+======================================
+
+  Currently Plutocracy is known to work on the following systems:
+
+
+  2.1  POSIX systems
+  ------------------
+
+    On a Debian/Ubuntu system you will need to install the following
+    development packages in addition to your normal compiling environment:
+
+      libsdl-dev
+      libsdl-pango-dev
+      libpng12-dev
+      zlib1g-dev
+      python
+
+    Plutocracy is packaged with SCons. Compile with:
+
+      $ python setup.py build
+
+
+  2.2  MacOS X (Darwin)
+  ---------------------
+
+    On Darwin you will need to install the latest version of Python and SCons
+    first:
+
+      Python      http://www.python.org/download/
+
+    Then install the development ports for the following libraries from
+    'c':
+
+      SDL
+      SDL_Pango
+
+    Afterwards you should be able to follow the POSIX system instructions
+    above to compile.
+
+
+  2.2  Windows with Visual Studio
+  -------------------------------
+
+    Note: With the latest plutocracy, we've suspended updating the Windows
+          port due to lack of interest. This information may be outdated.
+
+    The windows\vc8 directory contains a solution and project file setup for
+    compiling Plutocracy with Visual Studio 2005. The windows directory
+    includes the following SDKs and the project file is already setup to
+    use them:
+
+      SDL         http://libsdl.org/
+      SDL_ttf     http://www.libsdl.org/projects/SDL_ttf/
+      zlib        http://www.zlib.net/
+      libpng      http://www.libpng.org/
+
+
+  2.2  Windows with MinGW
+  -----------------------
+
+    Note: With the latest plutocracy, we've suspended updating the Windows
+          port due to lack of interest. This information may be outdated.
+
+    Plutocracy can be compiled for MinGW using SCons. You will need to install
+    and setup the following programs:
+
+      Python      http://www.python.org/download/
+      MinGW       http://www.mingw.org/download.shtml
+
+    Note that MinGW is required, but MSys is not necessary. You will need to
+    configure the PATH environment variable to contain the path of the
+    MinGW bin directory:
+
+      1.) Right click on 'My Computer'
+      2.) Select 'Properties'
+      3.) Select 'Advanced' tab
+      4.) Press 'Environment Variables'
+      5.) Select 'PATH' in the top listbox
+      6.) Press 'Edit'
+      7.) Enter the path to the Python, Python Scripts, and MinGW bin
+          directories followed by a semicolon before any paths that are
+          already there:
+
+            C:\Program Files\Python 2.5;
+            C:\Program Files\Python 2.5\Scripts;
+            C:\MSys\MinGW\bin;
+
+    You should now be able to open a command prompt, navigate to the
+    Plutocracy directory and compile using scons:
+
+      C:\plutocracy> scons mingw=yes
+
+    For additional build targets run scons help:
+
+      C:\plutocracy> scons -h
+
+    Note that after SCons is run for the first time (even if with the -h flag),
+    it will create 'custom.py', the configuration file, and draw its options
+    from there instead of from the environment. Specify changes over the
+    command-line after this point or remove the configuration file.
+
+    Please note that if you are not using version 4 of MinGW GCC, you will need
+    to disable percompiled headers:
+
+      C:\plutocracy> scons mingw=yes pch=no
+
+
+
+3. Playing Plutocracy
+=====================
+
+  TODO
+
+
+
+4. Developing for Plutocracy
+============================
+
+  The Plutocracy development team welcomes volunteer contributions! Please drop
+  by our IRC if you are interested in developing the game:
+
+    #plutocracy on FreeNode
+
+  We welcome work suggestions and always have something to do for programmers,
+  graphic and sound effect artists, and musicians.
+
+
+  4.1  Blender and the PLUM Model Format
+  --------------------------------------
+
+    Plutocracy uses a custom model format called PLUM, the "PLUtocracy Model
+    format". Current model files are kept in the models subdirectory. You
+    will notice that most of these models are gzipped. Because PLUM is a plain
+    text format, gzipping the file when it is ready for distribution saves
+    space. Plutocracy automatically checks for a gzipped version of a file
+    although the non-gzipped version will be loaded instead if it is available.
+
+    While the PLUM format is open and simple enough that a plugin exporter
+    could be written for any modelling software suite, we currently only have
+    a Python exporter plugin for Blender. On Linux, the file export_plum.py
+    needs to be copied (or linked) to your ~/.blender/scripts directory.
+
+    You should now be able to export the current scene via Blender's export
+    menu. There are some caveats to using the exporter, please read the usage
+    instructions within export_plum.py itself.
+
+
+  4.2  GoogleCode
+  ---------------
+
+    Plutocracy's wiki and bugs are currently hosted on GoogleCode:
+
+        http://plutocracy.googlecode.com/
+
+    The Issue Tracker on this website is the primary means of assigning work
+    and tracking bugs (see: 1.1  Reporting Bugs and Known Issues).
+
+    You can get a read-only version of plutocracy from our git repo with:
+
+        git clone git://git.mercenariesguild.net/plutocracy.git
+
+    See the compilation instructions above (2. Compiling and Installing
+    Plutocracy) for more information.
+
+    Please note that the SVN repository is no longer being updated, and
+    we now use git only.
+
+
+
+5. License and Copying
+======================
+
+  While the large part of Plutocracy is licensed under the GPL, there are some
+  exceptions for individual components.
+
+
+  5.1  GPL License
+  ----------------
+
+    Plutocracy (including both source code and media) is licensed under the
+    terms of the GNU General Public License (GPL) version 2 or (at your option)
+    any later version. There are some exceptions for specific files however
+    (see below).
+
+    The full text of the license may be found in the COPYING file.
+
+
+  5.2  GPL-Compatible Exceptions
+  ------------------------------
+
+    The following files are not licensed under the GPL, but can be freely
+    distributed. See the each individual file's copyright notice for specific
+    details:
+
+      vc8/glext.h (� 2007 The Khronos Group Inc)
+      gui/fonts/BLKCHCRY.TTF (public domain, Earl Allen and Doug Miles)
+      gui/fonts/SF ARchery Black.ttf (� 2001 ShyFonts Type Foundry)
+
+
+  5.3  CC License Exceptions
+  --------------------------
+
+    The following files are licensed under the CREATIVE COMMONS ATTRIBUTION-
+    SHAREALIKE 2.5 LICENSE. The full license text is contained in the file named
+    CC. Please read http://creativecommons.org/licenses/by-sa/2.5/ to learn
+    more about this license.
+
+    The following files are derived from files originally from the Tremulous
+    project, authored by Robin 'Overflow' Marshall, Mike 'Veda' McInnerney, and
+    Paul 'MoP' Greveson:
+
+      models/blender/granger.blend
+      models/test/granger.plum
+
+
+  5.4  Deja Vu Fonts
+  ------------------
+
+    The following files are excepted from the GPL license:
+
+      gui/fonts/DejaVuSans-Bold.ttf
+      gui/fonts/DejaVuSansMono-Bold.ttf
+
+    To see the full license for the DejaVu fonts, please see:
+
+      http://dejavu.sourceforge.net/wiki/index.php/License
+
+    Note that when packaged for a specific distribution, these files may already
+    be present on the system rather than come with the program.
+
+
+  5.5  SDL Notice
+  ---------------
+
+    Please include this notice with the SDL runtime environment. This library is
+    distributed under the terms of the GNU LGPL license:
+
+      http://www.gnu.org/copyleft/lesser.html
+
+    The source is available from the libraries page at the SDL website:
+
+      http://www.libsdl.org/
+
+
+  5.6  zlib Notice
+  ----------------
+
+    zlib is (C) 1995-2005 Jean-loup Gailly and Mark Adler
+
+    This software is provided 'as-is', without any express or implied
+    warranty.  In no event will the authors be held liable for any damages
+    arising from the use of this software.
+
+    Permission is granted to anyone to use this software for any purpose,
+    including commercial applications, and to alter it and redistribute it
+    freely, subject to the following restrictions:
+
+    1. The origin of this software must not be misrepresented; you must not
+       claim that you wrote the original software. If you use this software
+       in a product, an acknowledgment in the product documentation would be
+       appreciated but is not required.
+    2. Altered source versions must be plainly marked as such, and must not be
+       misrepresented as being the original software.
+    3. This notice may not be removed or altered from any source distribution.
+
+    Jean-loup Gailly        Mark Adler
+    jloup@gzip.org          madler@alumni.caltech.edu
+
+
+
+................................................................................

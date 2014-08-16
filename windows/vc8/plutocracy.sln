@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plutocracy", "plutocracy.vcproj", "{637261CD-259E-4778-8383-AD64D9DA9D28}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gendoc", "gendoc.vcproj", "{7D5DC4F7-678B-4AE7-A5A4-D768222B387D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{637261CD-259E-4778-8383-AD64D9DA9D28}.Debug|Win32.ActiveCfg = Debug|Win32
+		{637261CD-259E-4778-8383-AD64D9DA9D28}.Debug|Win32.Build.0 = Debug|Win32
+		{637261CD-259E-4778-8383-AD64D9DA9D28}.Release|Win32.ActiveCfg = Release|Win32
+		{637261CD-259E-4778-8383-AD64D9DA9D28}.Release|Win32.Build.0 = Release|Win32
+		{7D5DC4F7-678B-4AE7-A5A4-D768222B387D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7D5DC4F7-678B-4AE7-A5A4-D768222B387D}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
